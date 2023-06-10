@@ -10,6 +10,10 @@ class Program
         string percent = Console.ReadLine();
         int percentage = int.Parse(percent);
         string letter ="";
+        string let ="";
+
+
+        int rest = percentage % 10;
 
         if (percentage >= 90)
         {
@@ -28,7 +32,17 @@ class Program
         else
         {   letter="F";}
 
-        Console.Write($"Your grade is: {letter}. ");
+       
+
+        if (rest < 6)
+        {
+            let = "-";
+        }
+
+        else
+        { let = "+"; }
+
+         Console.Write($"Your grade is: {let}{letter}. ");
 
         if (percentage >= 70)
         {
